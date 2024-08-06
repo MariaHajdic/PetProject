@@ -1,0 +1,107 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header .left {
+    flex: 1;
+}
+
+.header .center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.header .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .button {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.header .button:hover {
+    text-decoration: underline;
+}
+
+.masonry-grid {
+    display: flex;
+    width: auto;
+}
+
+.masonry-grid-column {
+    padding-left: 4px;
+    padding-right: 4px;
+    background-clip: padding-box;
+}
+
+.image img {
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.control-panel {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.control-panel button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.control-panel button.selected {
+    background-color: coral;
+    color: white;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header .center {
+        flex: 1;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}

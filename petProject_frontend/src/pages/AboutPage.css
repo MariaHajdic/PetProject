@@ -1,0 +1,15 @@
+.about-page {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.about-page img {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.about-page .content {
+    max-width: 50%;
+}
